@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Compras</h1>
+        <form id="item-form">
+            <input type="text" id="item-name" placeholder="Nome do Item" required>
+            <input type="text" id="item-price" placeholder="Valor do Item" required pattern="^\d+([,.]\d{1,2})?$">
+            <input type="number" id="item-quantity" placeholder="Quantidade" required min="1">
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul id="shopping-list"></ul>
+        <div class="total">
+            <strong>Total: R$ <span id="total">0.00</span></strong>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
